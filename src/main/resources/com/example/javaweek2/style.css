@@ -2,5 +2,9 @@
 
     -fx.background-color: pink;
     -fx-font-family: Gabriola;
-    
+
+}
+#header{
+    -fx-font-size: 60px;
+    -fx-text-fill: #FF9800;
 }

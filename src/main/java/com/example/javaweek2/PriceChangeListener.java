@@ -1,0 +1,13 @@
+package com.example.javaweek2;
+
+
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+
+public class PriceChangeListener implements ChangeListener {
+    @Override
+    public void changed(ObservableValue observableValue, Object oldValue, Object newValue) {
+        System.out.printf("old value: %.2f      new Value: %.2f%n",oldValue, newValue);
+    }
+}
