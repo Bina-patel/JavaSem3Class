@@ -49,7 +49,7 @@ public class CreateCameraViewController implements Initializable {
         priceLabel.setText(String.format("$%.2f", priceSlider.getValue()));
 
         //making an inner class and referring to it
-//        priceSlider.valueProperty().addListener(new PriceChangeListener2());
+        priceSlider.valueProperty().addListener(new PriceChangeListener2());
 
         //creating an anonymous inner class
 //        priceSlider.valueProperty().addListener(new ChangeListener<Number>() {
@@ -63,6 +63,12 @@ public class CreateCameraViewController implements Initializable {
         priceSlider.valueProperty().addListener((observableValue, oldValue, newValue) -> {
             priceLabel.setText(String.format("$%.2f", newValue));
         });
+
+        //configure the spinner to work with Integers in the range of 5-75
+        //the arguments are min, max, default and step or increment
+        SpinnerValueFactory<Integer> spinnerValueFactory =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(5, 75, 18, 5);
+        mpSpinner.setValueFactory(spinnerValueFactory);
 
 
     }
